@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body >
+			<div ng-controller="myCtr1">
+				
+				{{user.age}}
+			</div>
+			
+			<div ng-controller="myCtr2">
+				
+				{{user.name}}
+			</div>
+			
+		
+	</body>
+	<script src="libs/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module("myApp",[]);
+		app.controller("myCtr1",function($scope){
+			$scope.user = {"name":"zhangsan","age":18}
+		});
+		app.controller("myCtr2",function($scope){
+			$scope.user = {"name":"zhangsan","age":18}
+		});
+	</script>
+</html>

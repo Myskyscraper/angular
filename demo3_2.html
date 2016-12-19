@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body ng-controller="myCtr">
+		<ul>
+			<li ng-repeat="province in province">{{province.name}}</li>
+		</ul>
+		
+			
+	</body>
+	<script src="libs/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module("myApp",[]);
+		app.controller("myCtr",function($scope){
+			var provices = [
+			{
+				"name":"浙江",
+				cities:[
+					{"name":"金华"},
+					{"name":"杭州"},
+					{"name":"温州"}
+				]
+			},
+			{
+				"name":"浙江",
+				cities:[
+					{"name":"金华"},
+					{"name":"杭州"},
+					{"name":"温州"}
+				]
+			},
+			{
+				"name":"浙江",
+				cities:[
+					{"name":"金华"},
+					{"name":"杭州"},
+					{"name":"温州"}
+				]
+			}
+			]
+			$scope.province = provices;
+			
+		})
+	</script>
+</html>

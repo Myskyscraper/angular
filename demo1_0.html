@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>1</title>
+	</head>
+	<body ng-controller="myCtrl">
+		{{hello}}
+	</body>
+	<script src="libs/angular/angular.js" charset="UTF-8"></script>
+	<script>
+	
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope){
+			$scope.hello = "world";
+		});
+	</script>
+</html>
